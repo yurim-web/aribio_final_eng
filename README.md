@@ -8,13 +8,13 @@
 ---
 
 ## 📄 페이지 구성
-- 🏠 Home: `index.html`  
-- 📦 Products: `product.html`  
-- 🔬 Technology: `technology.html`  
-- 🏭 Business Areas: `business.html`  
-- 📞 Support: `support.html`  
-- ❓ FAQ: `faq.html`  
-- ✉️ Contact: `contact.html`  
+- 🏠 메인(Main): `index.html`  
+- 📦 제품(Products): `product.html`  
+- 🔬 기술(Technology): `technology.html`  
+- 🏭 사업분야(Business Areas): `business.html`  
+- 📞 고객지원(Support): `support.html`  
+- ❓ 자주 묻는 질문(FAQ): `faq.html`  
+- ✉️ 문의(Contact): `contact.html`  
 
 ---
 
