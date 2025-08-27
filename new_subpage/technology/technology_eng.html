@@ -1,0 +1,527 @@
+<!--@layout(/layout/basic/layout_eng.html)-->
+
+<script>
+  const currentPage = 'technology'; // ✅ 페이지 키 변경
+
+  const langLinks = {
+  technology: { 
+    kor: 'https://herzion.com/new_subpage/technology/technology.html',
+    eng: 'https://en.herzion.com/new_subpage/technology/technology_eng.html',
+    jpn: 'https://jp.herzion.com/new_subpage/technology/technology_jpn.html',
+    cny: 'https://cn.herzion.com/new_subpage/technology/technology_cny.html'
+}
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileLangDiv = document.getElementById('mobile_lang_links');
+    const desktopLangUl = document.getElementById('desktop_lang_links');
+    const links = langLinks[currentPage];
+
+    if (mobileLangDiv && links) {
+      mobileLangDiv.innerHTML = `
+        <a href="${links.kor}"><button >KOR</button></a>
+        <a href="${links.eng}"><button class="active">ENG</button></a>
+        <a href="${links.jpn}"><button>JPN</button></a>
+        <a href="${links.cny}"><button>CHN</button></a>
+      `;
+    }
+
+    if (desktopLangUl && links) {
+      desktopLangUl.innerHTML = `
+        <a href="${links.kor}"><li data-value="kor">KOR</li></a>
+        <a href="${links.eng}"><li data-value="eng"  class="active">ENG</li></a>
+        <a href="${links.jpn}"><li data-value="jpn">JPN</li></a>
+        <a href="${links.cny}"><li data-value="cny">CHN</li></a>
+      `;
+    }
+  });
+</script>
+
+
+    <link rel="stylesheet" href="/technology/technology_eng.css" />
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <link rel="stylesheet" href="../layout_new/footer.css?=20250723" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="../layout_new/layout.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="technology_eng.js?=20250711" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
+    <link rel="stylesheet" href="technology_eng.css?=20250725_6">
+    <link rel="stylesheet" href="mo_technology_eng.css?=20250722_1">
+    
+    <style>
+        .mobile_break,
+        .tab_break,
+        .web_break {
+            display: none;
+        }
+
+        /* 모바일 */
+        @media all and (max-width: 767px) {
+            .mobile_break { display: inline; }
+        }
+
+        /* 태블릿 */
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            .tab_break { display: inline; }
+        }
+
+        /* PC(웹) */
+        @media all and (min-width: 1025px) {
+            .web_break { display: inline; }
+        }
+    </style>
+    <main>
+        <!-- 메인 베너 부분 -->
+        <section class="banner_section">
+            <div class="hero">
+                <div class="hero_content">
+                    <h1>Technology</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Was Developed 섹션 -->
+        <section class="tech_intro_section">
+            <div class="container">
+                <h2 class="section_title">How It Was Developed</h2>
+                <h2 class="section_title_mo">How It Was Developed</h2>
+                <div class="tech_intro_content">
+                    <div class="tech_intro_text">
+                    Herzion is a low-frequency vibroacoustic device, originally based on foundational technology from a 2012 study, and has since been refined to meet modern wellness needs.  
+                       <span class="tech_intro_text_blue_web">Developed around the scientific potential of low-frequency vibration stimulation to promote neuronal differentiation and aid in the recovery of damaged neural tissue, Herzion uses non-invasive brain stimulation technology. </span>  It is designed for everyday use to support cognitive health and emotional well-being.
+                    </div>
+                    <div class="tech_intro_text_mo">
+                        Herzion is a low-frequency vibroacoustic device, originally based on foundational technology from a 2012 study, and has since been refined to meet modern wellness needs. 
+                        <span class="tech_intro_text_blue_mo">Developed around the scientific potential of low-frequency vibration stimulation to promote neuronal differentiation and aid in the recovery of damaged neural tissue, Herzion uses non-invasive brain stimulation technology. </span>  It is designed for everyday use to support cognitive health and emotional well-being.
+                    </div>
+                </div>
+                <div class="section1_img_container">
+                    <img class="section1_img img_web" src="images/section1_eng_2.png" alt="헤르지온 기술 소개 이미지">
+                    <img class="section1_img img_mo" src="images/mo/section1_eng_mo_2.png" alt="헤르지온 기술 소개 이미지">
+                </div>
+            </div>
+        </section>
+
+        <!-- 추가된 섹션(이미지 섹션) -->
+        <section class="section2_img_section">
+            <div class="container img_section_container">
+                <div class="top_img_box">
+                    <img src="images/section_2_top_eng.svg" alt="">
+                </div>
+                <div class="top_img_box_mo">
+                    <img src="images/mo/mo_section_2_top_eng.svg" alt="">
+                </div>
+                <div class="bottom_container">
+                    <div class="bottom_contents_box">
+                        <div class="botoom_content">
+                            <div class="section2_img_box left_1"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">Low-frequency sound-vibration-based brain stimulation<br></span>
+                                Brain stimulation using physical vibrations at low frequencies
+                            </p>
+                        </div>
+                        <div class="botoom_content">
+                            <div class="section2_img_box left_2"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">Transcranial delivery of vibrations<br></span>
+                                Vibrational energy passes through the skull to directly stimulate neural tissue
+                            </p>
+                        </div>
+                        <div class="botoom_content" style="border-bottom: none;">
+                            <div class="section2_img_box left_3"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">Non-invasive method<br></span>
+                                Applied safely without cutting or inserting into skin/tissue
+                            </p>
+                        </div>
+                    </div>
+                    <h1 class="bottom_content_text_middle">                
+                        <span class="title_bold"></span>
+                        tVAS: Transcranial Vibroacoustic Stimulation<br>
+                    </h1>
+                    <div class="bottom_contents_box">
+                        <div class="botoom_content">
+                            <div class="section2_img_box right_1"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">Multisensory-based neural tissue stimulation<br></span>
+                                Brain activation through resonance and integrated sensory mechanisms such as auditory and tactile input
+                            </p>
+                        </div>
+                        <div class="botoom_content">
+                            <div class="section2_img_box right_2"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">Modulates brain activity and enhances sensory information processing<br></span>
+                                Specific frequencies of sound vibration regulate neural circuits and promote sensory interaction
+                            </p>
+                        </div>
+                        <div class="botoom_content" style="border-bottom: none;">
+                            <div class="section2_img_box right_3"></div>
+                            <p class="bottom_content_text">
+                                <span class="title_bold">Mild, detectable sound-vibration or resonance stimulation<br></span>
+                                Recognized as gentle and stable sensations by the user
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section2_mid_img"></div>
+                <!-- 모바일 버전 -->
+                <div class="bottom_container_mo">
+                    <p class="mo_bottom_text">
+                        <span class="title_bold"></span>
+                        tVAS: Transcranial Vibroacoustic Stimulation<br>
+                    </p>
+                    <div class="bottom_content_mo">
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_1"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">Low-frequency sound-vibration-based brain stimulation<br></span>
+                                Brain stimulation using physical vibrations at low frequencies
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_2"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">Transcranial delivery of vibrations<br></span>
+                                Vibrational energy passes through the skull to directly stimulate neural tissue
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_3"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">Non-invasive method<br></span>
+                                Applied safely without cutting or inserting into skin/tissue
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_4"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">Multisensory-based neural tissue stimulation<br></span>
+                                Brain activation through resonance and integrated sensory mechanisms such as auditory and tactile input
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box">
+                            <div class="section2_img_box_mo m_img_5"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">Modulates brain activity and enhances sensory information processing<br></span>
+                                Specific frequencies of sound vibration regulate neural circuits and promote sensory interaction
+                            </p>
+                        </div>
+                        <div class="bottom_content_mo_box" style="border-bottom: none;">
+                            <div class="section2_img_box_mo m_img_6"></div>
+                            <p class="bottom_content_text_mo">
+                                <span class="title_bold">Mild, detectable sound-vibration or resonance stimulation<br></span>
+                                Recognized as gentle and stable sensations by the user
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 추가된 섹션 표 부분 -->
+        <section class="graph_section">
+            <div class="container">
+                <h1 class="section_title">tVAS vs Traditional Non-Invasive<br>
+                Brain Stimulation (NIBS) Techniques</h1>
+                <h2 class="section_title_mo" style="line-height: 1.3;">tVAS vs Traditional Non-Invasive 
+                Brain Stimulation (NIBS) Techniques</h2>
+                  <img src="images/graph_eng_1.svg" class="graph_img" alt="">
+                <img src="images/mo/mo_graph_eng_1.svg" class="graph_img_mo" alt="">
+            </div>
+        </section>
+
+        <!-- Core Technology 섹션 -->
+        <section class="tech_features_section">
+            <div class="container">
+                <h2 class="section_title">Core Technology</h2>
+                <h2 class="section_title_mo">Technology</h2>
+                <h3 class="section_subtitle_mo">Herzion</h3>
+                <div class="tech_features_grid ">
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img1" src="images/section3_1.png" alt="특별한 음향진동 이펙트 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <p class="tech_feature_subtitle">Safer for the Body · All-Brain Vibration</p>
+                        <h3 class="tech_feature_title web_text_three">
+                            Unique <span class="mobile_break">Vibroacoustic Effect</span><span class="webtab_break">Vibroacoustic Effect</span>
+                        </h3>
+                        <h3 class="tech_feature_title tab_text">Unique Vibroacoustic Effect</h3>
+                        <h3 class="tech_feature_title mo_text">Unique Vibroacoustic Effect</h3>
+                        <p class="tech_feature_text">
+                            Unlike conventional methods that rely on strong stimuli such as electricity, light, or noise,
+                            <span class="tech_feature_text_blue"> Herzion delivers broad and deep vibrations gently through acoustic resonance.</span>
+                         Its safe, low-frequency vibroacoustic technology minimizes strain on the body,
+making it suitable for use even during work or daily activities.
+                        </p>
+                        <!-- 테블릿 버전 -->
+                        <p class="tect_feature_text_mo tab_text">
+                            Unlike conventional methods that rely on strong stimuli such as electricity, light, or noise, <span class="tech_feature_text_blue">Herzion delivers broad and deep vibrations gently through acoustic resonance.</span>
+                          Its safe, low-frequency vibroacoustic technology minimizes strain on the body,
+making it suitable for use even during work or daily activities.
+                        </p>
+                    <!-- 모바일 버전 -->
+                         <p class="tect_feature_text_mo mo_text">
+                            Unlike conventional methods that rely on strong stimuli such as electricity, light, or noise,<span class="tech_feature_text_blue"> Herzion delivers broad and deep vibrations gently through acoustic resonance.</span>
+                          Its safe, low-frequency vibroacoustic technology minimizes strain on the body,
+making it suitable for use even during work or daily activities.
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img2" src="images/section3_2.png" alt="초소형 음향 진동 모듈 이미지" style="object-fit:cover;">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <p class="tech_feature_subtitle">Multi-channel Stimulation on the Brain</p>
+                        <h3 class="tech_feature_title web_text_three">Equipped with Ultra-Compact Vibroacoustic Modules</h3>
+                        <h3 class="tech_feature_title tab_text">Equipped with Ultra-Compact Vibroacoustic Modules</h3>
+                        <h3 class="tech_feature_title mo_text">Equipped with Ultra-Compact Vibroacoustic Modules</h3>
+                        <p class="tech_feature_text">
+                            Herzion is equipped with ultra-compact vibroacoustic modules
+                            <span class="tech_feature_text_blue">that deliver direct stimulation to the frontal and temporal lobes.</span>
+                           Its precise multi-channel stimulation technology helps activate brain function.
+                        </p>
+                        <p class="tect_feature_text_mo tab_text">
+                            Herzion is equipped with ultra-compact vibroacoustic modules
+                            <span class="tech_feature_text_blue">that deliver direct stimulation to the frontal and temporal lobes.</span> Its precise multi-channel stimulation technology helps activate brain function.
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            Herzion is equipped with ultra-compact vibroacoustic modules
+                            <span class="tech_feature_text_blue">that deliver direct stimulation to the frontal and temporal lobes.</span> Its precise multi-channel stimulation technology helps activate brain function.
+
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img3" src="images/section3_3_eng2.png" alt="저주파 음향진동 자극 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <h3 class="tech_feature_title web_text_three">
+                            Optimized Performance for Low-Frequency 
+                            <span>Vibration Stimulation</span>
+                        </h3>
+                        <h3 class="tech_feature_title tab_text">Optimized Performance for Low-Frequency Vibration Stimulation </h3>
+                        <h3 class="tech_feature_title mo_text">Optimized Performance for Low-Frequency Vibration Stimulation </h3>
+                        <p class="tech_feature_text">
+                           Herzion is engineered to deliver stable and precise vibrations
+in the low-frequency range of 20Hz to 120Hz,
+
+                            <span class="tech_feature_text_blue">providing optimal stimulation intensity and frequency response for brain care.</span>
+                        </p>
+                        <p class="tect_feature_text_mo tab_text">
+                        Herzion is engineered to deliver stable and precise vibrations in the low-frequency range of 20Hz to 120Hz,
+                        <span class="tech_feature_text_blue">providing optimal stimulation intensity and frequency response for brain care.</span>
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                          Herzion is engineered to deliver stable and precise vibrations
+in the low-frequency range of 20Hz to 120Hz,
+
+<span class="tech_feature_text_blue">providing optimal stimulation intensity and frequency response for brain care.</span>
+                        </p>
+                    </div>
+
+                    <div class="tech_feature_image_card">
+                        <img class="tech_feature_image_card_img4" src="images/section3_4_eng.png" alt="저주파 음향진동 자극 이미지">
+                    </div>
+                    <div class="tech_feature_content_card">
+                        <h3 class="tech_feature_title web_four">
+                            Optimized Vibration Pattern Technology for Diverse Sensory Stimulation
+                        </h3>
+                        <h3 class="tech_feature_title mobile_four tab_text">Optimized Vibration Pattern Technology for Diverse Sensory Stimulation </h3>
+                        <h3 class="tech_feature_title mobile_four mo_text">Optimized Vibration Pattern Technology for Diverse Sensory Stimulation </h3>
+                        <p class="tech_feature_text">
+                            Herzion <span class="tech_feature_text_blue">delivers a variety of tactile sensations by precisely modulating the intensity, rhythm, and frequency of vibrations.</span>
+                            The system is designed to provide personalized brain stimulation based on individual needs and user conditions.
+                        </p> 
+                        <p class="tect_feature_text_mo tab_text">
+                            Herzion <span class="tech_feature_text_blue">delivers a variety of tactile sensations by precisely modulating the intensity, rhythm, and frequency of vibrations.</span>
+                            The system is designed to provide personalized brain stimulation based on individual needs and user conditions.
+                        </p>
+                        <p class="tect_feature_text_mo mo_text">
+                            Herzion <span class="tech_feature_text_blue">delivers a variety of tactile sensations by precisely modulating the intensity, rhythm, and frequency of vibrations.</span>
+                            The system is designed to provide personalized brain stimulation based on individual needs and user conditions.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scientific Basis 섹션 -->
+        <section class="scientific_basis_section">
+            <div class="container">
+                <h2 class="section_title">Scientific Basis</h2>          
+                <div class="scientific_basis_scroll">
+                    <div class="swiper researchSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="https://pdf.sciencedirectassets.com/271056/1-s2.0-S0361923024X00131/1-s2.0-S0361923024002727/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHoaCXVzLWVhc3QtMSJHMEUCICtlWLOMR44dZMnPuILxEWfKgrt0qGYzvqGj8YmvqyxkAiEAmCP4zx24rA8fiLXSM60eeOVGAXntId4Ccz%2Flht%2FNHasqvAUIg%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDL3mnN0w7PErJD%2BRpyqQBdtyZ1Qnxj0uvtOLbDugFc4DsRpO5muYqOueX8G6a%2BvydzqGikvBRsOM0BE4W9M97aFQbFXHBhyO388wXeTLkkf69FLoKV0r6uluGsgwaOo2tbc4xzb9X13aHY8hgk9UwsRzQrUs5HZlPnUIV1%2FfYTBjsfSEV7%2B%2FYZHUmY18FjC3nmKE8BpRqJuizIVyssaPq4r66%2BpPnj9%2FggM%2By6u7ik52zeHVit%2F7vRWBNyM4uGiTbPR14psEuv6vlnIrVNW%2F50J4CnGmAwyqqNKgOZkSNgc0EO6V6B4RjImo9Pr9HWwVQq6p%2Fj3xcU0H6yOIRuRO1sy86MgIQ3CWp5lf0ycJSpCgzu4ovg64JtK3LWJjaE2SEm0fULiLH59kOzyOGRE33KHV1FH7d3J1Yw02jLXeekQeB4a3SoI%2B1I%2FcuF9miXa1WEhjiSuu0v0AOk6ro3WZJANR20bJ8jVwVvbdf2qvK%2FGUhGodlaVFFJa638X5dAb7gWX2CBLWIn7jZsQB0nl4M7ppeFAI%2BPnaLxDrO7lyJmebuFrueNVp8GutwB0uSryYxkPNF4k24DinVYhwkQkJ5U%2BNwi1nIpGL02Ztz28W1uDYsnUC14RY8i%2BOZhcixWmwOlScof5MOf%2FTzBuIuCPveoeX68AVVKh6YfrNApluIQLjEbAaj%2BA0OaN%2FWQtI9fr2ydr3gakl%2BwwptyK6J9d2SqhDoR%2Bakg5OKjKNJJfHdapajx57LSyFdey1eTJJldiQuBkgR7vcDEzUxzPQY7uyVwiszTWEHLu0lDX4m6d%2FG8Q1u%2BE6fIzlKn6jKZKPEUUaFAwa3Bw%2F%2FpMs7NxTO3pyl0bKM1FBqnWDJ9I3j6hYnyOlVKM8XpZd%2FA%2F1Q36tLBLSMN3sscMGOrEBLN7zT%2BreyFx4EStxkeEPf0r%2BMxEGXU09MPkjOfrwmfM%2BEIcvTpTBw4zou3qGCVbOgnfPABNyLconA0IgOQrzmrYwbbrf0DCNUZ4PmOWhcFlUbRJLWtrLCJNuOAwvOCujhOL68IP2QHzW1qey1SycAuQuOaosUOdnUMfKzvJUoNyZwuvC0dwzcrEI%2BpQFGuHK69%2BhboItxNT5P%2FhUq3f0PZwl8JGjExv8%2FjnWiMoASDb1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250708T024305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=299&X-Amz-Credential=ASIAQ3PHCVTYVZOHI4RI%2F20250708%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8ee5e341587a2e9b6c63a76b57d90b783520336189345bf86c5d542eff340c3c&hash=b3d9609670102e4b9c1ff77e7cdc261afaaad4c52972a5c0475dd6f7f8f0c6ff&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0361923024002727&tid=spdf-ae9643a4-6806-4299-9c25-0edd8acb9389&sid=eaa56985293bc744a669d9a91d29c29a7004gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=11145d5306035406545807&rr=95bc3b68d9ae8b5e&cc=kr" target="_blank">
+                                    <div class="research_card">
+                                        <div class="research_card_image_rounded card_hover_effect">
+                                            <img src="images/thesis_1.jpg" alt="연구 이미지 1">
+                                            <button class="view_btn">View</button>
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Vibrotactile stimulation at 40 Hz inhibits Aβ-induced changes in SH-SY5Y, BV2 cells, and pericytes</h3>
+                                            <p class="research_date">2025. 01</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2025.1526088/abstract" target="_blank">
+                                    <div class="research_card">
+                                        <div class="research_card_image card_hover_effect">
+                                            <img src="images/thesis_2.jpg" alt="연구 이미지 2">
+                                            <button class="view_btn">View</button>
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Improvement of neuropsychological and cognitive functions in older adults through transcranial vibroacoustic stimulation: a double blind, randomized, comparative trial</h3>
+                                            <p class="research_date">2025. 07</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" taget="">
+                                    <div class="research_card">
+                                        <div class="research_card_image_rounded card_hover_effect">
+                                            <!--<img src="" alt="연구 이미지 3">
+                                            <button class="view_btn">View</button>-->
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Coming Soon</h3>
+                                            <!--<p class="research_date">2024. 05</p>-->
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" target="">
+                                    <div class="research_card">
+                                        <div class="research_card_image card_hover_effect">
+                                            <!--<img src="" alt="연구 이미지 4">
+                                            <button class="view_btn">View</button>-->
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Coming Soon</h3>
+                                            <!--<p class="research_date">2024. 05</p>-->
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a hef="#" target="">
+                                    <div class="research_card">
+                                        <div class="research_card_image card_hover_effect">
+                                            <!--<img src="" alt="연구 이미지 5">
+                                            <button class="view_btn">View</button>-->
+                                        </div>
+                                        <div class="research_card_content">
+                                            <h3>Coming Soon</h3>
+                                            <!--<p class="research_date">2024. 05</p>-->
+                                        </div>
+                                    </div>
+                                </div>
+                             </a>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="custom-progressbar">
+                            <div class="custom-progressbar-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <!-- Scientific Basis 섹션 모바일버전 -->
+        <section class="thesis_mobile_section">
+            <div class="container">
+                <h2 class="section_title_mo">Thesis</h2>
+                <div class="swiper mobileThesisSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thesis_mobile_card_container">
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="images/thesis_1.jpg" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Vibrotactile stimulation at 40 Hz inhibits Aβ-induced changes in SH-SY5Y, BV2 cells, and pericytes</h3>
+                                        <a href="https://pdf.sciencedirectassets.com/271056/1-s2.0-S0361923024X00131/1-s2.0-S0361923024002727/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHoaCXVzLWVhc3QtMSJHMEUCICtlWLOMR44dZMnPuILxEWfKgrt0qGYzvqGj8YmvqyxkAiEAmCP4zx24rA8fiLXSM60eeOVGAXntId4Ccz%2Flht%2FNHasqvAUIg%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDL3mnN0w7PErJD%2BRpyqQBdtyZ1Qnxj0uvtOLbDugFc4DsRpO5muYqOueX8G6a%2BvydzqGikvBRsOM0BE4W9M97aFQbFXHBhyO388wXeTLkkf69FLoKV0r6uluGsgwaOo2tbc4xzb9X13aHY8hgk9UwsRzQrUs5HZlPnUIV1%2FfYTBjsfSEV7%2B%2FYZHUmY18FjC3nmKE8BpRqJuizIVyssaPq4r66%2BpPnj9%2FggM%2By6u7ik52zeHVit%2F7vRWBNyM4uGiTbPR14psEuv6vlnIrVNW%2F50J4CnGmAwyqqNKgOZkSNgc0EO6V6B4RjImo9Pr9HWwVQq6p%2Fj3xcU0H6yOIRuRO1sy86MgIQ3CWp5lf0ycJSpCgzu4ovg64JtK3LWJjaE2SEm0fULiLH59kOzyOGRE33KHV1FH7d3J1Yw02jLXeekQeB4a3SoI%2B1I%2FcuF9miXa1WEhjiSuu0v0AOk6ro3WZJANR20bJ8jVwVvbdf2qvK%2FGUhGodlaVFFJa638X5dAb7gWX2CBLWIn7jZsQB0nl4M7ppeFAI%2BPnaLxDrO7lyJmebuFrueNVp8GutwB0uSryYxkPNF4k24DinVYhwkQkJ5U%2BNwi1nIpGL02Ztz28W1uDYsnUC14RY8i%2BOZhcixWmwOlScof5MOf%2FTzBuIuCPveoeX68AVVKh6YfrNApluIQLjEbAaj%2BA0OaN%2FWQtI9fr2ydr3gakl%2BwwptyK6J9d2SqhDoR%2Bakg5OKjKNJJfHdapajx57LSyFdey1eTJJldiQuBkgR7vcDEzUxzPQY7uyVwiszTWEHLu0lDX4m6d%2FG8Q1u%2BE6fIzlKn6jKZKPEUUaFAwa3Bw%2F%2FpMs7NxTO3pyl0bKM1FBqnWDJ9I3j6hYnyOlVKM8XpZd%2FA%2F1Q36tLBLSMN3sscMGOrEBLN7zT%2BreyFx4EStxkeEPf0r%2BMxEGXU09MPkjOfrwmfM%2BEIcvTpTBw4zou3qGCVbOgnfPABNyLconA0IgOQrzmrYwbbrf0DCNUZ4PmOWhcFlUbRJLWtrLCJNuOAwvOCujhOL68IP2QHzW1qey1SycAuQuOaosUOdnUMfKzvJUoNyZwuvC0dwzcrEI%2BpQFGuHK69%2BhboItxNT5P%2FhUq3f0PZwl8JGjExv8%2FjnWiMoASDb1&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250708T024305Z&X-Amz-SignedHeaders=host&X-Amz-Expires=299&X-Amz-Credential=ASIAQ3PHCVTYVZOHI4RI%2F20250708%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8ee5e341587a2e9b6c63a76b57d90b783520336189345bf86c5d542eff340c3c&hash=b3d9609670102e4b9c1ff77e7cdc261afaaad4c52972a5c0475dd6f7f8f0c6ff&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0361923024002727&tid=spdf-ae9643a4-6806-4299-9c25-0edd8acb9389&sid=eaa56985293bc744a669d9a91d29c29a7004gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=11145d5306035406545807&rr=95bc3b68d9ae8b5e&cc=kr" target="_blank">
+                                            <div class="card_botteom">
+                                                <p class="thesis_mobile_date">2025. 01</p>
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                        	</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="images/thesis_2.jpg" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                       <h3>Improvement of neuropsychological and cognitive functions in older adults through transcranial vibroacoustic stimulation: a double blind, randomized, comparative trial</h3>
+                                         <a herf="https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2025.1526088/abstract" target="_blank">
+                                            <div class="card_botteom">
+                                                <p class="thesis_mobile_date">2025. 07</p>
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Coming Soon</h3>
+                                        <a href="#" target="">
+                                            <div class="card_botteom">
+                                                <!--<p class="thesis_mobile_date">2024. 03</p>-->
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Coming Soon</h3>
+                                        <a href="#" target="">
+                                            <div class="card_botteom">
+                                                <!--<p class="thesis_mobile_date">2024. 03</p>-->
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thesis_mobile_card_container">
+                                <div class="thesis_mobile_card">
+                                    <div class="thesis_mobile_card_image">
+                                        <img src="#" alt="">
+                                    </div>
+                                    <div class="thesis_mobile_card_content">
+                                        <h3>Coming Soon</h3>
+                                        <a href="" target="">
+                                            <div class="card_botteom">
+                                                <!--<p class="thesis_mobile_date">2024. 03</p>-->
+                                                <img src="images/mo/mo_arrow.svg" alt="모바일 버튼 이미지"></img>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>

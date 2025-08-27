@@ -1,0 +1,509 @@
+<!--@layout(/layout/basic/layout_eng.html)-->
+<script>
+  const currentPage = 'business';
+
+  const langLinks = {
+    business: {
+      kor: 'https://herzion.com/new_subpage/business/business.html',
+    eng: 'https://en.herzion.com/new_subpage/business/business_eng.html',
+    jpn: 'https://jp.herzion.com/new_subpage/business/business_jpn.html',
+    cny: 'https://cn.herzion.com/new_subpage/business/business_cny.html'
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileLangDiv = document.getElementById('mobile_lang_links');
+    const desktopLangUl = document.getElementById('desktop_lang_links');
+    const links = langLinks[currentPage];
+
+    if (mobileLangDiv && links) {
+      mobileLangDiv.innerHTML = `
+        <a href="${links.kor}"><button >KOR</button></a>
+        <a href="${links.eng}"><button class="active">ENG</button></a>
+        <a href="${links.jpn}"><button>JPN</button></a>
+        <a href="${links.cny}"><button>CHN</button></a>
+      `;
+    }
+
+    if (desktopLangUl && links) {
+      desktopLangUl.innerHTML = `
+        <a href="${links.kor}"><li data-value="kor">KOR</li></a>
+        <a href="${links.eng}"><li data-value="eng"  class="active">ENG</li></a>
+        <a href="${links.jpn}"><li data-value="jpn">JPN</li></a>
+        <a href="${links.cny}"><li data-value="cny">CHN</li></a>
+      `;
+    }
+  });
+</script>
+
+    <link rel="stylesheet" href="business_eng.css?=20250731_1" />
+    <!-- 반응형 스타일 -->
+    <link rel="stylesheet" href="mo_business_eng.css?=20250712_5" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+    <!-- header css -->
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../layout_new/footer.css?=2025055" />
+    <!-- layout js -->
+    <script src="../layout_new/layout.js" defer></script>
+    <script src="business.js" defer></script>
+
+    <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Business</h1>
+          </div>
+        </div>
+      </section>
+      <!-- Vibroacoustic Technology Innovation 섹션 -->
+      <section class="vibroacoustic_section">
+        <article class="container">
+            <h2 class="section_title">Vibroacoustic Technology Innovation</h2>
+            <p class="section_sub_title pc_text">Our innovative technology combines vibration and sound to naturally activate brain function, offering a safe, non-invasive way to easily support brain health.</p>
+            <p class="section_sub_title mo_text  tab_text">Our innovative technology combines vibration and sound to naturally activate brain function, offering a safe, non-invasive way to easily support brain health.</p>
+            <p class="section_sub_title mo_text momo_text">Our innovative technology combines vibration and sound to naturally activate brain function, offering a safe, non-invasive way to easily support brain health.</p>
+            <div class="section1_img_group">
+              <!-- pc 버전,테블릿버전 이미지 -->
+              <img class="pc_img tab_img" src="images/section1_img_1.png"></img>
+              <img class="pc_img tab_img" src="images/section1_img_2.png"></img>
+              <!-- 모바일버전 이미지 -->
+              <img class="mo_img tab_none_img" src="images/mo/mo_section1_img_1.png"></img>
+              <img class="mo_img tab_none_img" src="images/mo/mo_section1_img_2.png"></img>
+            </div>
+
+            <div class="section1_content_container">
+              <div class="section1_content_box">
+                <h3>Optimized for Neural Health</h3>
+                <p>Neuroscience-based care for improved neural function</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>Scientifically Proven System</h3>
+                <p>Scientifically validated with data and testing</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>Customized Vibration & Sound Stimulation</h3>
+                <p>Fine-tuned stimulation tailored to your sensory needs</p>
+              </div>
+              <div class="section1_content_box">
+                <h3>Integration of Advanced Technologies</h3>
+                <p>Convergence of Science, Health, and Design</p>
+              </div>
+            </div>
+        </article>
+      </section>
+
+      <!-- Cognitive Health Solutions 섹션 -->
+      <section class="cognitive_health_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Cognitive Health Solutions</h2>
+            
+            <p class="pc_text">Designed based on the latest neuroscience research,<br>
+this solution supports cognitive function and helps maintain brain wellness.<br>
+              It provides a comfortable, casual approach to everyday brain care.</p>
+              <p class="mo_text tab_text">Designed based on the latest neuroscience research,
+this solution supports cognitive function and helps maintain brain wellness.
+                It provides a comfortable, casual approach to everyday brain care.</p>
+
+            <p class="mo_text momo_text">Designed based on the latest neuroscience research, this solution supports cognitive function and helps maintain brain wellness.
+             It provides a comfortable, casual approach to everyday brain care.</p>
+          </div>
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_1"></div>
+              <h3>Wearable Device</h3>
+              <p class="pc_text">Designed for easy use in everyday life,
+                it supports continuous and convenient cognitive function management.</p>
+              <p class="mo_text">Designed for easy use in everyday life,
+               it supports continuous and convenient cognitive function management.</p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_2"></div>
+              <h3>Non-Invasive Technology</h3>
+              <p class="pc_text">Delivers safe and natural brain support<br>
+without the need for medication<br> or surgical intervention.</p>
+              <p class="mo_text">Delivers safe and natural brain support
+without the need for medication or surgical intervention.</p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section2_content_img_3"></div>
+              <h3>Personalized Program</h3>
+              <p class="pc_text">Provides optimized stimulation patterns <br>designed to each individual's <br>cognitive condition and needs.
+              </p>
+              <p class="mo_text">Provides optimized stimulation patterns designed to each individual's cognitive condition and needs.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Lifestyle Wellness 섹션 -->
+      <section class="lifestyle_wellness_section">
+        <article class="container section3_container">
+          <div class="section3_container_left">
+            <h2 class="section_title">Lifestyle Wellness</h2>
+            <p class="section_sub_title pc_text">
+      Herzion offers non-invasive, low-frequency vibroacoustic stimulation technology
+that supports brain wellness across diverse fields.
+From personal wellness to work productivity, its wearable format supports diverse business applications.
+            </p>
+            <p class="section_sub_title tab_text">
+              Herzion offers non-invasive, low-frequency vibroacoustic stimulation technology
+that supports brain wellness across diverse fields.
+From personal wellness to work productivity, its wearable format supports diverse business applications.
+            </p>
+            <p class="section_sub_title mo_text momo_text">
+           Herzion offers non-invasive, low-frequency vibroacoustic stimulation technology
+that supports brain wellness across diverse fields.
+From personal wellness to work productivity, its wearable format supports diverse business applications.
+            </p>
+          </div>
+          <!-- pc 전용 -->
+           <div class="pc_text">
+            <div class="section3_container_right ">
+              <div class="content_left_box">
+                <div class="section3_img_box">
+                  <h1>01</h1>
+                  <h2>Daily Wellness Care</h2>
+                  <p>Wellness solutions and cognitive care for elders and general consumers</p>
+                  <img src="images/section3_icon_1.svg" alt=""></img>
+                </div>
+                <div class="section3_img_box">
+                  <h1>03</h1>
+                  <h2>Sleep Cycle Support</h2>
+                  <p>Low-frequency stimulation for better sleep, compatible with tech and healthcare platforms</p>
+                  <img src="images/section3_icon_3.svg" alt=""></img>
+                </div>
+              </div>
+              <div class="content_right_box">
+                <div class="section3_img_box">
+                  <h1>02</h1>
+                  <h2>Mental & Stress Relief</h2>
+                  <p>Emotional regulation and relaxation services, suitable for meditation-based content</p>
+                  <img src="images/section3_icon_2.svg" alt=""></img>
+                </div>
+                <div class="section3_img_box">
+                  <h1>04</h1>
+                  <h2>Focus-Intensive Role Support</h2>
+                  <p>Brain stimulation solutions for professionals, remote workers, and education fields (B2B service applicable)</p>
+                  <img style="width: 72px;" src="images/section3_icon_4.svg" alt=""></img>
+                </div>
+              </div>
+            </div>
+           </div>
+
+
+          <!-- 모바일전용 -->
+          <div class="mo_text">
+            <div class="section3_container_right">
+              <div class="section3_img_box">
+                <h1>01</h1>
+                <h2>Daily Wellness Care</h2>
+                <p>Wellness solutions and cognitive care for elders and general consumers</p>
+                <img src="images/section3_icon_1.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>02</h1>
+                <h2>Mental & Stress Relief</h2>
+                <p>Emotional regulation and relaxation services, suitable for meditation-based content</p>
+                <img src="images/section3_icon_2.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>03</h1>
+                <h2>Sleep Cycle Support</h2>
+                <p>Low-frequency stimulation for better sleep, compatible with tech and healthcare platforms</p>
+                <img src="images/section3_icon_3.svg" alt=""></img>
+              </div>
+              <div class="section3_img_box">
+                <h1>04</h1>
+                <h2>Focus-Intensive Role Support</h2>
+                <p>Brain stimulation solutions for professionals, remote workers, and education fields (B2B service applicable)</p>
+                <img class="section3_icon_4" src="images/section3_icon_4.svg" alt=""></img>
+              </div>
+          </div>
+        </div>
+
+        </article>
+      </section>
+
+      <!-- Sports & Fitness Solutions 섹션 -->
+      <section class="sports_fitness_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Sports & Fitness Solutions</h2>
+            <p class="pc_text">Herzion's low-frequency vibroacoustic stimulation can be applied to optimize physical readiness and recovery.<br/>
+It provides a scalable solution for sports, fitness, and rehabilitation sectors.
+            </p>
+            <p class="pc_text tab_text">Herzion's low-frequency vibroacoustic stimulation can be applied to optimize physical readiness and recovery.
+It provides a scalable solution for sports, fitness, and rehabilitation sectors.
+            </p>
+            <p class="mo_text momo_text">
+              Herzion's low-frequency vibroacoustic stimulation can be applied to optimize physical readiness and recovery.
+It provides a scalable solution for sports, fitness, and rehabilitation sectors.
+            </p>
+          </div>
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_1"></div>
+              <h3>Pre-Workout Preparation</h3>
+              <p class="pc_text">Stimulates the nervous system to enhance muscle responsiveness and focus,
+helping the body reach an optimal state before exercise.</p>
+              <p class="mo_text">Stimulates the nervous system to enhance muscle responsiveness and focus,
+helping the body reach an optimal state before exercise.</p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_2"></div>
+              <h3> In-Workout Performance Support</h3>
+              <p>Improves concentration and reaction, enhancing better athletic performance.
+              </p>
+            </div>
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section4_content_img_3"></div>
+              <h3>Post-Workout Recovery</h3>
+              <p>Aids in reducing muscle fatigue and accelerating recovery through neuromodulatory stimulation.             
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Digital Health Platform 섹션 -->
+      <section class="digital_health_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">Digital Health Platform</h2>
+            <p class="pc_text">
+              A personalized brain wellness platform powered by digital health technology<br>
+Herzion's platform collects and analyzes neural and physiological data to <br>assess brain condition and suggest optimal stimulation solutions tailored to the user.
+            </p>
+            <p class="pc_text tab_text">
+             A personalized brain wellness platform powered by digital health technology
+Herzion's platform collects and analyzes neural and physiological data to assess brain condition and suggest optimal stimulation solutions tailored to the user.
+            </p>
+            <p class="mo_text momo_text">
+              A personalized brain wellness platform powered by digital health technology
+Herzion's platform collects and analyzes neural and physiological data to assess brain condition and suggest optimal stimulation solutions tailored to the user.
+            </p>
+          </div>
+          <div class="health_content_container">
+            <div class="health_img_box health_img_1">
+              <div class="helath_img_text_box">
+                <h1>Data-Driven<br> Analysis</h1>
+                <p class="pc_text">
+                   Collects EEG and biometric data to provide<br>
+                objective insights into cognitive states<br>
+                and behavioral trends.
+                </p>
+                <p class="mo_text">
+                Collects EEG and biometric data to provide
+                objective insights
+                into cognitive states
+                and behavioral trends.
+                </p>
+              </div> 
+            </div>
+
+            <div class="health_img_box health_img_2">
+              <div class="helath_img_text_box">
+                <h1>Real-Time<br>Monitoring Module</h1>
+              <p class="pc_text">
+                Tracks ongoing biometric responses to monitor changes<br/>
+                 and evaluate the effectiveness 
+                 <br/>of the stimulation program.
+              </p>
+              <p class="mo_text">
+                Tracks ongoing biometric <br>responses to monitor changes
+                 and evaluate the effectiveness 
+                 of the stimulation program.
+              </p>
+              </div>
+            </div>
+            <div class="health_img_box health_img_3">
+              <div class="helath_img_text_box">
+                <h1>Integrated Wellness<br>Management</h1>
+              <p class="pc_text">
+                Supports not only brain function, but also sleep, stress,<br>
+                and emotional balance through a<br>
+                comprehensive and expandable platform.
+              </p>
+              <p class="mo_text">
+                 Supports not only brain function, <br>but also sleep, stress,
+                and emotional balance through a
+                comprehensive and expandable platform.
+              </p>
+              </div>
+            </div>
+            <div class="health_img_box health_img_4">
+              <div class="helath_img_text_box">
+                <h1>Personalized Stimulation<br>Recommendation</h1>
+              <p class="pc_text">
+               AI-powered algorithms propose stimulation<br>
+                content and patterns based on<br>
+                each user's condition and response.
+              </p>
+              <p class="mo_text">
+                AI-powered algorithms propose stimulation
+                content and patterns based on
+                each user's condition and response.
+              </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- B2B Solutions 섹션 -->
+      <section class="b2b_solutions_section">
+        <article class="container">
+          <div class="section2_title_box">
+            <h2 class="section_title">B2B Solutions</h2>
+            <p class="pc_text">Customized neuro-wellness solutions for professional institutions<br>Herzion offers customizable brain health technologies to support the goals of medical, research, and corporate clients.</p>
+             
+              <p class=" tab_text">Customized neuro-wellness solutions for professional institutions
+              Herzion offers customizable brain health technologies to support the goals of medical, research, and corporate clients.</p>
+           
+              <p class="mo_text momo_text">
+              Customized neuro-wellness solutions for professional institutions
+              Herzion offers customizable brain health technologies to support
+               the goals of medical, research, and corporate clients.</p>
+            
+          </div>
+
+          <div class="section_content_3box_continer">
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_1"></div>
+              <h3>Medical Partnerships</h3>
+              <p class="pc_text">We provide professional-grade neurostimulation solutions for hospitals and clinics.
+               Applications include cognitive support, rehabilitation, and adjunctive therapy.</p>
+
+              <p class="mo_text">
+                We provide professional-grade neurostimulation
+                solutions for hospitals and clinics.
+                Applications include cognitive support,
+                rehabilitation, and adjunctive therapy.
+              </p>
+            </div>
+
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_2"></div>
+              <h3>Research Support</h3>
+              <p class="pc_text">Advanced stimulation equipment and data-driven 
+               analysis tools are available to support neuroscience and cognitive research projects.
+              </p>
+              <p class="mo_text">
+                Advanced stimulation equipment and data-driven
+               analysis tools are available to support neuroscience and
+               cognitive research projects.
+              </p>
+            </div>
+
+            <div class="section_content_3box">
+              <div class="section_content_img_3box section6_content_img_3"></div>
+              <h3>Corporate Wellness Programs</h3>
+              <p class="pc_text">We develop customized wellness programs to help reduce stress and support focus in the workplace,
+                enhancing employee well-being and organizational productivity.
+              </p>
+              <p class="mo_text">
+                We develop customized wellness programs to 
+                help reduce stress and support focus in the workplace,
+enhancing employee well-being and organizational productivity.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Global Market Expansion Strategy 섹션 -->
+      <section class="global_market_expansion_section">
+        <article class="container">
+          <h2 class="section_title" style="color: #ffffff;">Global Market Expansion Strategy</h2>
+          <p class="global_subtitle">Herzion is expanding globally,
+           targeting key healthcare and wellness markets through strategic localization and regulatory synergy.</p>
+        </article>
+      </section>
+
+     <!-- Global Market Expansion Strategy 서브 섹션 -->
+      <section class="global_market_expansion_sub_section">
+        <article class="container global_container">
+          <div class="global_text_4box">
+            <h1>01</h1>
+            <h2>Domestic Market Stabilization</h2>
+            <p class="pc_text">
+              Elevate brand presence in Korea's healthcare and wellness markets,
+              while expanding product offerings to strengthen the foundation of domestic success.
+            </p>
+            <p class="pc_text tab_text">
+               Elevate brand presence in Korea's healthcare and wellness markets,
+              while expanding product offerings to strengthen the foundation of domestic success.
+            </p>
+            <p class="mo_text momo_text">
+               Elevate brand presence in Korea's healthcare and wellness markets,
+              while expanding product offerings to strengthen the foundation of domestic success.
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>02</h1>
+            <h2>Expansion into Asia</h2>
+            <p class="pc_text">
+              Maximize growth in Asia by leveraging geographic proximity and the surge in demand through
+              localized marketing and strategic regional collaborations.
+            </p>
+            <p class="pc_text tab_text">
+              Maximize growth in Asia by leveraging geographic proximity and the surge in demand through
+              localized marketing and strategic regional collaborations.
+            </p>
+            <p class="mo_text momo_text">
+              Maximize growth in Asia by leveraging geographic
+              proximity and the surge in demand through localized marketing 
+              and strategic regional collaborations.
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>03</h1>
+            <h2>Expansion into North America and Europe</h2>
+            <p class="pc_text">
+              Fast-track market entry into advanced regions through global certifications,
+              while building strong local distribution and sales networks.
+            </p>
+            <p class="pc_text tab_text">
+              Fast-track market entry into advanced regions through global certifications,
+              while building strong local distribution and sales networks.
+            </p>
+            <p class="mo_text momo_text">
+              Fast-track market entry into advanced regions
+              through global certifications,
+              while building strong local distribution and sales networks.
+            </p>
+          </div>
+          <div class="global_text_4box">
+            <h1>04</h1>
+            <h2>Global Brand Positioning</h2>
+            <p class="pc_text">
+              Position Herzion as a global leader in brain health,
+              driven by cutting-edge technology and clinically proven effectiveness.
+            </p>
+            <p class="pc_text tab_text">
+              Position Herzion as a global leader in brain health,
+              driven by cutting-edge technology and clinically proven effectiveness.
+            </p>
+            <p class="mo_text momo_text">
+              Position Herzion as a global leader in brain health,
+              driven by cutting-edge technology
+              and clinically proven effectiveness.
+            </p>
+          </div>
+
+        </article>
+      </section>
+
+    
+    </main>
+

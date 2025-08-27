@@ -1,0 +1,145 @@
+<!--@layout(/layout/basic/layout_eng.html)-->
+
+<!-- support -->
+<script>
+  const currentPage = 'support';
+
+  const langLinks = {
+support: {
+    kor: 'https://herzion.com/new_subpage/support/support.html',
+    eng: 'https://en.herzion.com/new_subpage/support/support_eng.html',
+    jpn: 'https://jp.herzion.com/new_subpage/support/support_jpn.html',
+    cny: 'https://cn.herzion.com/new_subpage/support/support_cny.html'
+}
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileLangDiv = document.getElementById('mobile_lang_links');
+    const desktopLangUl = document.getElementById('desktop_lang_links');
+    const links = langLinks[currentPage];
+
+    if (mobileLangDiv && links) {
+      mobileLangDiv.innerHTML = `
+        <a href="${links.kor}"><button >KOR</button></a>
+        <a href="${links.eng}"><button class="active">ENG</button></a>
+        <a href="${links.jpn}"><button>JPN</button></a>
+        <a href="${links.cny}"><button>CHN</button></a>
+      `;
+    }
+
+    if (desktopLangUl && links) {
+      desktopLangUl.innerHTML = `
+        <a href="${links.kor}"><li data-value="kor" >KOR</li></a>
+        <a href="${links.eng}"><li data-value="eng"class="active">ENG</li></a>
+        <a href="${links.jpn}"><li data-value="jpn">JPN</li></a>
+        <a href="${links.cny}"><li data-value="cny">CHN</li></a>
+      `;
+    }
+  });
+</script>
+
+
+    <link rel="stylesheet" href="support_eng.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+    <!-- header css -->
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <!-- footer css -->
+    <link rel="stylesheet" href="../layout_new/footer.css?=20250723" />
+    <!-- layout js -->
+    <script src="../layout_new/layout.js" defer></script>
+
+    <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Support</h1>
+          </div>
+        </div>
+      </section>
+      <!-- 가이드 섹션 -->
+      <section class="use_guide_wrap">
+        <h2>Use Guide</h2>
+        <div class="guide_content">
+          <div class="guide_card">
+            <div class="card_content">
+              <span class="card_category">How-to Video</span>
+              <h3>How to Use the Herzion<br />Learn by Watching the Video</h3>
+              <a href="https://www.youtube.com/watch?v=Hp7aM2ny7TQ" target="_blank" class="watch_btn">
+                <img src="images/menu_arrow.svg" class="btn_arrow" alt="버튼"></img>
+                <span class="btn_text">Watch Now</span>
+              </a>
+            </div>
+            <div class="card_img">
+              <img src="images/menu_img_1.png" alt="사용 설명 영상" />
+            </div>
+          </div>
+
+          <div class="guide_card">
+            <div class="card_content">
+              <span class="card_category">User Manual</span>
+              <h3>Herzion <br>User Manual<br>Download</h3>
+              <a href="https://memorythm.mycafe24.com/audio/user_guide_en.pdf" target="_blank" class="download_btn">
+                <img
+                  src="images/menu_arrow_2.svg"
+                  class="btn_arrow"
+                  alt="버튼"
+                ></img>
+                <span class="btn_text">Download</span>
+              </a>
+            </div>
+            <div class="card_img">
+              <img src="images/menu_img_2.png" alt="사용 설명서" />
+            </div>
+          </div>
+
+          <div class="guide_card">
+            <div class="card_content">
+              <span class="card_category">Customer Support</span>
+              <h3>For more details 1:1 Consultation</h3>
+              <div class="btn_box">
+                <a href="https://pf.kakao.com/_KvCVG" target="_blank" class="watch_btn">
+                  <img
+                    src="images/menu_arrow.svg"
+                    class="btn_arrow"
+                    alt="버튼"
+                  ></img>
+                  <span class="btn_text">Chat Support</span>
+                </a>
+                
+              </div>
+            </div>
+            <div class="card_img">
+              <img src="images/menu_img_3.png" alt="고객 지원" />
+            </div>
+          </div>
+
+          <div class="guide_card">
+            <div class="card_content">
+              <span class="card_category">Device & App Integration</span>
+              <h3>Herezion App<br>Download</h3>
+              <a href="https://play.google.com/store/apps/details?id=com.aribio.app.herzion&hl=ko" target="_blank" class="download_btn">
+                <img
+                  src="images/menu_arrow_2.svg"
+                  class="btn_arrow"
+                  alt="버튼"
+                ></img>
+                <span class="btn_text">Download</span>
+              </a>
+            </div>
+            <div class="card_img">
+              <img src="images/menu_img_4.png" alt="앱 다운로드" ></img>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+

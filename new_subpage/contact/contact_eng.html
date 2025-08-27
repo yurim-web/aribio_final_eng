@@ -1,0 +1,215 @@
+<!--@layout(/layout/basic/layout_eng.html)-->
+<script>
+  const currentPage = 'contact'; 
+
+  const langLinks = {
+contact: {
+    kor: 'https://herzion.com/new_subpage/contact/contact.html',
+    eng: 'https://en.herzion.com/new_subpage/contact/contact_eng.html',
+    jpn: 'https://jp.herzion.com/new_subpage/contact/contact_jpn.html',
+    cny: 'https://cn.herzion.com/new_subpage/contact/contact_cny.html'
+},
+
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileLangDiv = document.getElementById('mobile_lang_links');
+    const desktopLangUl = document.getElementById('desktop_lang_links');
+    const links = langLinks[currentPage];
+
+    if (mobileLangDiv && links) {
+      mobileLangDiv.innerHTML = `
+        <a href="${links.kor}"><button >KOR</button></a>
+        <a href="${links.eng}"><button class="active">ENG</button></a>
+        <a href="${links.jpn}"><button>JPN</button></a>
+        <a href="${links.cny}"><button>CHN</button></a>
+      `;
+    }
+
+    if (desktopLangUl && links) {
+      desktopLangUl.innerHTML = `
+        <a href="${links.kor}"><li data-value="kor">KOR</li></a>
+        <a href="${links.eng}"><li data-value="eng"  class="active">ENG</li></a>
+        <a href="${links.jpn}"><li data-value="jpn">JPN</li></a>
+        <a href="${links.cny}"><li data-value="cny">CHN</li></a>
+      `;
+    }
+  });
+</script>
+
+  <link rel="stylesheet" href="contact_eng.css?=20250725" />
+    <link rel="stylesheet" href="../layout_new/header.css" />
+    <link rel="stylesheet" href="../layout_new/footer.css?=20250723" />
+    <script src="../layout_new/layout.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="contact_eng.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
+      
+          <script src="/new_subpage/contact/contact_input.js" defer></script>
+    <!-- 이메일 전송!!! -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+ <form action="" id="contact-form">
+      <main>
+      <!-- 메인 베너 부분 -->
+      <section class="banner_section">
+        <div class="hero">
+          <div class="hero_content">
+            <h1>Contact</h1>
+          </div>
+        </div>
+      </section>
+      <!-- Swiper 컨테이너 -->
+      <div class="swiper inquiry_swiper">
+        <div class="swiper-wrapper">
+          <!-- 첫 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>Hello.<br />What kind of<br>inquiry do you have?</h1>
+                    <p>* Multiple selections allowed</p>
+                  </div>
+                  <div class="inquiry_right_container">
+                    <!-- 문의유형 선택 버튼 -->
+                    <button type="button" class="inquiry_btn" data-value="Bulk Purchase Inquiry" id="inquiry_btn_1">
+                       Bulk Purchase Inquiry
+                    </button>
+                    <button type="button" class="inquiry_btn" data-value="Partnership Inquiry" id="inquiry_btn_2">
+                     Partnership Inquiry
+                    </button>
+                    <button type="button" class="inquiry_btn" data-value="Exhibition Inquiry" id="inquiry_btn_3">
+                       Exhibition Inquiry
+                    </button>
+                    <button type="button" class="inquiry_btn" data-value="Other Inquiry" id="inquiry_btn_4">
+                      Other Inquiry
+                    </button>
+
+                    <!-- 숨겨진 필드: 실제로 EmailJS에 전송될 값 -->
+                    <input type="hidden" name="inquiry_type" id="inquiry_type" />
+                  </div>
+
+                </div>
+ 
+              <!-- 제출 버튼 -->
+              <button class="submit_btn" type="button" id="first_submit_btn">Next →</button>
+                <!-- 모바일 전용 버튼  -->
+                <button type="button" class="inquiry_btn inquiry_btn_mobile" id="inquiry_btn_mobile">
+                  Next
+                </button>
+              </div>
+            </section>
+          </div>
+          <!-- 두 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box inquiry_box_desktop">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>Please leave your<br/>information for the inquiry.</h1>
+                  </div>
+                  <div class="information_right_container">
+                    <!-- 회사 정보 부분 -->
+                       <div class="infomation_box">
+                 <!--      <h3>Company Information</h3>  -->
+                      <div class="information_btn_box">
+                        <button class="information_btn">
+                          Company Name<span class="red_color">*</span>
+                        </button>
+                        <button class="information_btn">
+                          Email<span class="red_color">*</span>
+                        </button>
+                        <input
+                          class="information_btn information_input"
+                          placeholder="Please enter your company name."
+                          name="office_name"
+                        ></input><input
+                          class="information_btn information_input"
+                          placeholder="Please enter your email address."
+                          name="user_email"
+                          
+                        ></input>
+                      </div>
+                    </div>
+                    
+ 
+                    <!-- 담당자 정보 부분 -->
+                
+                      <div class="infomation_box">
+                  <!--     <h3>Contact Person Information</h3>  -->
+                      <div class="information_btn_box">
+                        <button class="information_btn">
+                         Name<span class="red_color">*</span>
+                        </button>
+                        <button class="information_btn">
+                         Phone Number<span class="red_color">*</span>
+                        </button>
+                        <input class="information_btn information_input" placeholder="Please enter your name." name="user_name" ></input>
+                        <input class="information_btn information_input" placeholder="Please enter your phone number." name="user_phone" ></input>
+                      </div>
+                    </div>
+                
+                    <!-- 문의 정보 부분 -->
+                    
+                       <div class="infomation_box">
+                      <!-- <h3>Contact Person Information</h3> -->
+                      <div class="information_btn_box last_btn_box">
+                        <button class="information_btn">Inquiry Content</button>
+                        <input class="information_btn information_input " name ="message" placeholder="Please write your inquiry."></input>
+                      </div>
+                    </div>
+             
+                  </div>
+                </div>
+                
+              </div>
+              <!-- 모바일 버전  -->
+              <div class="inquiry_box mobile_section">
+                <div class="inquiry_contents">
+                  <div class="inquiry_left_container">
+                    <h1>Please leave your information for the inquiry.</h1>
+                    <p style="color: #ff3a3a">＊ All fields are required</p>
+                  </div>
+                  <div class="inquiry_right_container">
+                    <input class="inquiry_btn input_mobile" placeholder="Company Name" name="office_name"/><input class="inquiry_btn input_mobile"style="color: #3c3c3c" placeholder="Email" name="user_email"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c"placeholder="Name" name="user_name"/><input class="inquiry_btn input_mobile" style="color: #3c3c3c" placeholder="Phone Number" name="user_phone"/><textarea class="inquiry_btn input_mobile_long" placeholder="Inquiry Content" rows="4" name ="message"></textarea>
+                  </div>
+                </div>
+                <button
+                  class="inquiry_btn inquiry_btn_mobile"
+                  id="next_btn_mobile"
+                >
+                  Next
+                </button>
+              </div>
+              <!-- 제출 버튼 -->
+              <button class="submit_btn submit_btn_location" type="button" id="second_submit_btn">Submit →</button>
+               <!-- 이전 버튼 -->
+              <button type="button" class="submit_btn submit_btn_location_back" id="second_back_btn">← Previous</button>
+            </section>
+          </div>
+          <!-- 세 번째 슬라이드 -->
+          <div class="swiper-slide">
+            <section class="inquiry_section">
+              <div class="inquiry_box">
+                <div class="inquiry_contents">
+                  <div class="inquiry_center_container">
+                    <h1>
+                       Thank you for reaching out!<br />We’ll review your inquiry and get back to you shortly.
+                    </h1>
+                    <button class="back_btn" type="button" id="back_btn">Go Back →</button>
+                    <button class="back_btn_mobile" type="button" id="back_btn_mobile">
+                      Go Back
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  
+</form>
+
